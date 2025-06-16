@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HighlightsTests {
+public class UpcomingTest {
     @Test
-    public void getHighlightsTest() {
+    public void getUpcomingTest() {
         Map<String, String> queryParams = new HashMap<>();
         queryParams.put("timezoneOffset", "-180");
         queryParams.put("langId", "8");
