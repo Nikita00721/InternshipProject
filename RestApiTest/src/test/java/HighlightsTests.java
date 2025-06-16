@@ -24,5 +24,10 @@ public class HighlightsTests {
         queryParams.put("hasStreaming", "false");
 
         GetUpcomingResponse getUpcomingResponse = FrontendClient.getUpcoming(queryParams);
+
+        /* Место для ассертов (подсказывать не буду)
+         Вот вам вывод в консоль для наглядности */
+
+        System.out.println(getUpcomingResponse.getResult().toString());
     }
 }
