@@ -1,5 +1,5 @@
 import clients.FrontendClient;
-import model.getHighlightsResponse.GetUpcomingResponse;
+import com.altenar.sb2.admin.model.UpdateHighlightsConfigRequest;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -23,11 +23,12 @@ public class UpcomingTest {
         queryParams.put("count", "10");
         queryParams.put("hasStreaming", "false");
 
-        GetUpcomingResponse getUpcomingResponse = FrontendClient.getUpcoming(queryParams);
+        UpdateHighlightsConfigRequest updateHighlightsConfigRequest =
+                new UpdateHighlightsConfigRequest();
+        updateHighlightsConfigRequest.setConfigId(123);
 
-        /* Место для ассертов (подсказывать не буду)
-         Вот вам вывод в консоль для наглядности */
+        com.altenar.sb2.frontend.model.GetUpcomingEventsResults getUpcomingResponse = FrontendClient.getUpcoming(queryParams);
 
-        System.out.println(getUpcomingResponse.getResult().toString());
+        System.out.println(getUpcomingResponse.getEvents().toString());
     }
 }
